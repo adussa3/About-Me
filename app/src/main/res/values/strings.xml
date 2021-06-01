@@ -2,4 +2,14 @@
     <string name="app_name">About Me</string>
     <string name="name">Anunoy Dussa</string>
     <string name="yellow_star">Yellow star</string>
+    <string name="bio">
+        Hi, my name is Anunoy but I usually go by Siddu.
+        \n\nI am a graduate student at Georgia Institute of Technology majoring in Computer Science.
+        \nWithin Computer Science, I specialize in Computer Science and Human-Computer Interaction.
+        \n\nI started learning how to make Android apps in Kotlin for my 2021 Summer Internship.
+        \n\nA fun fact about me is I can sing the alphabet backwards.
+        \n\nSome of my hobbies include playing board games with friends and playing video games on the Wii and Nintendo DS.
+        \n\nMy favorite board game is Catan and my favorite game is Pokémon Platinum on the Nintendo DS.
+        \n\n
+    </string>
 </resources>
