@@ -15,10 +15,16 @@ class MainActivity : AppCompatActivity() {
     // Data binding generated the binding object at compile time for all views in the layout
     private lateinit var binding: ActivityMainBinding
 
+    // Create an instance of the data class
+    private val myName: MyName = MyName("Anunoy Dussa")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        // Set the value of the myName variable that is declared in the layout file
+        binding.myName = myName
 
         //// When the Done button is clicked,
         //findViewById<Button>(R.id.done_button).setOnClickListener {
@@ -43,7 +49,11 @@ class MainActivity : AppCompatActivity() {
         // We can use .apply {} to apply the data binding to all objects
         binding.apply {
             // Set the TextView to the EditText
-            nicknameText.text = nicknameEdit.text
+            //nicknameText.text = nicknameEdit.text
+            myName?.nickname = nicknameEdit.text.toString()
+
+            // Invalidates all binding expressions and requests a new rebind to refresh UI
+            invalidateAll()
 
             // Make the TextView visible
             // Hide the button and EditView
